@@ -1,0 +1,70 @@
+/* 1. Global resets and font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: hsl(212, 45%, 89%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("images/bg_pattern.jpg"); /* update to your file */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+}
+
+/* 2. Card container */
+.card {
+  background-color: white;
+  border-radius: 20px;
+  width: 300px;
+  overflow: hidden;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* 3. QR image */
+.card__image {
+  width: 100%;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+/* 4. Text below the image */
+.card__text {
+  padding: 0 20px 30px;
+}
+
+.card__title {
+  font-size: 1.25rem;
+  color: hsl(218, 44%, 22%);
+  margin: 15px 0 10px;
+  font-weight: 700;
+}
+
+.card__description {
+  font-size: 0.9rem;
+  color: hsl(220, 15%, 55%);
+  line-height: 1.4;
+}
+
+/* 5. Footer attribution */
+.attribution {
+  position: absolute;
+  bottom: 10px;
+  font-size: 11px;
+  text-align: center;
+  width: 100%;
+  color: hsl(220, 15%, 55%);
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}

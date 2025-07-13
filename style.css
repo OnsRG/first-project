@@ -7,42 +7,48 @@
 
 body {
   font-family: 'Outfit', sans-serif;
-  background-image: url("images/white.avif"); /* use the colorful background */
+  background-image: url("images/white.avif"); /* colorful background */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   padding: 20px;
   position: relative;
 }
 
+/* 2. Wrapper just helps center things, no more giant padding */
 .card-wrapper {
-  background-color: hsl(212, 45%, 80%); /* darker blue - adjust as needed */
-  padding: 60px 500px; /* more top/bottom and left/right space */
-  border-radius: 15px;
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
-/* 2. Card container */
+
+/* 3. The actual card */
 .card {
   background-color: white;
   border-radius: 20px;
-  width: 300px;
+  max-width: 320px;
+  width: 100%;
   overflow: hidden;
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
-/* 3. QR image */
-.card__image {
-  width: 100%;
-  border-radius: 10px;
+/* 4. Image wrapper */
+.card__image-wrapper {
   padding: 15px;
 }
 
-/* 4. Text below the image */
+.card__image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* 5. Text */
 .card__text {
   padding: 0 20px 30px;
 }
@@ -60,7 +66,7 @@ body {
   line-height: 1.4;
 }
 
-/* 5. Footer attribution */
+/* 6. Attribution */
 .attribution {
   position: absolute;
   bottom: 10px;
@@ -73,4 +79,11 @@ body {
 .attribution a {
   color: hsl(228, 45%, 44%);
   text-decoration: none;
+}
+
+/* 7. Responsive */
+@media (max-width: 480px) {
+  .card {
+    margin: 0 20px;
+  }
 }

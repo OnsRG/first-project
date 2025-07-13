@@ -7,18 +7,24 @@
 
 body {
   font-family: 'Outfit', sans-serif;
-  background-color: hsl(212, 45%, 89%);
+  background-image: url("images/white.avif"); /* use the colorful background */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url("images/bg_pattern.jpg"); /* update to your file */
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
   padding: 20px;
+  position: relative;
 }
 
+.card-wrapper {
+  background-color: hsl(212, 45%, 80%); /* darker blue - adjust as needed */
+  padding: 60px 500px; /* more top/bottom and left/right space */
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
 /* 2. Card container */
 .card {
   background-color: white;
